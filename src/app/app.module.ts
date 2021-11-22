@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { NavbarPanelComponent } from './navbar-panel/navbar-panel.component';
-import { BasketComponent } from './basket/basket.component';
-import { LoginComponent } from './login/login.component';
-import { SearchPanelComponent } from './search-panel/search-panel.component';
+import { HeaderComponent } from './conponents/header/header.component';
+import { NavbarPanelComponent } from './conponents/navbar-panel/navbar-panel.component';
+import { BasketComponent } from './conponents/basket/basket.component';
+import { LoginComponent } from './conponents/login/login.component';
+import { CardsComponent } from './conponents/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { SearchPanelComponent } from './search-panel/search-panel.component';
     NavbarPanelComponent,
     BasketComponent,
     LoginComponent,
-    SearchPanelComponent
+    CardsComponent
   ],
   imports: [
     BrowserModule
