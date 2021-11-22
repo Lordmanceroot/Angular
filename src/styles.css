@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Andada Pro', serif;
+  font-size: 18px;
+  background-color: #15181e;
+  color: #ceddec;
+  margin: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+button {
+  background: #3d3c44;
+  border: none;
+  color: #c4c4c4;
+  padding: 7px 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 7px 3px 3px 3px;
+}
+
+button:hover {
+  background-color: #c4c4c4;
+  color: #202327;
+  border: 1px solid #202327;
+}
+
+.container {
+  width: 100%;
+}
