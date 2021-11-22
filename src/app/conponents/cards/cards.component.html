@@ -1,0 +1,30 @@
+
+    <!-- CARD -->
+
+
+    <div class="cards container">
+      <ng-container *ngFor="let item of data">
+      <div class="card">
+        <div class="card-header">
+          <a href="#"
+             class="card-link">
+            <img class="card-image"
+                 src="{{item.image}}"
+                 alt="photo"/>
+            <h2 class="card-title">
+              {{item.name}}
+            </h2>
+          </a>
+        </div>
+
+
+      <div class="card-footer">
+          <strong class="card-price">{{item.price}}</strong>
+          <button class="card-in-basket"><span>В корзину</span></button>
+        </div>
+      </div>
+      </ng-container>
+    </div>
+
+
+
