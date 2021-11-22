@@ -1,0 +1,8 @@
+.basket-image {
+  width: 20px;
+}
+
+.basket-link {
+  display: flex;
+  justify-content: flex-end;
+}
