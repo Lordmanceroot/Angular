@@ -1,8 +1,105 @@
-.basket-image {
-  width: 20px;
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  opacity: 1;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  transition: all 0.3s cubic-bezier(0.55, 0.64, 0.61, 0.87) 0s;
 }
 
-.basket-link {
+.popup:target {
+  opacity: 1;
+
+}
+.popup-body {
+  min-height: 100%;
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+.popup-content {
+  background-color: #fff;
+  color: #202327;
+  max-width: 800px;
+  padding: 30px;
+  position: relative;
+}
+.popup-close {
+  position: absolute;
+  right: 27px;
+  top: 44px;
+  font-size: 40px;
+  color: black;
+  text-decoration: none;
+  transform: rotate(45deg);
+}
+.popup-title {
+  font-size: 33px;
+  margin: 15px;
+  font-weight: bold;
+}
+
+.checkout {
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  background-color: #15181e;
+  color: white;
+  font-size: 24px;
+  position: relative;
+  left: 10%;
+  transform: translate(-50%, 0);
+  justify-content: center;
+}
+
+.popup-basket {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 2px solid;
+  margin: 8px;
+  border-radius: 10px;
+}
+
+.popup-basket-name {
+  display: flex;
+  align-items: center;
+}
+
+.popup-list {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 300px;
+  width: 750px;
+}
+
+.popup-basket-image {
+  border-radius: 20px;
+  width: 50px;
+  object-fit: cover;
+}
+
+.delete-from-basket {
+  color: #202327;
+  background-color: #ffffff;
+  padding: 0;
+  border-radius: 0;
+  font-size: 90%;
+}
+
+.delete-from-basket:hover {
+  color: #c4c4c4;
+  background-color: #15181e;
+  border-radius: 7px 3px 3px 3px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
 }

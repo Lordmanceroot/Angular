@@ -13,7 +13,6 @@ export class CardsComponent implements OnInit {
 
   constructor() {
     this.data = products
-
   }
 
   ngOnInit(): void {

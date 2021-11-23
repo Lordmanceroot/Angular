@@ -5,7 +5,14 @@
       <span class="logo">TRADOS</span>
     </a>
     <app-navbar-panel></app-navbar-panel>
-    <app-basket></app-basket>
+    <div class="basket" (click)="openCart()">
+      <a class="basket-link">
+        <img class="basket-image"
+             src="https://mstatic.wbstatic.net/sitemobile/4.10.0/static/media/basket.665fe316.svg"
+             alt="">
+        <span>Корзина</span>
+      </a>
+    </div>
     <app-login></app-login>
   </div>
 </header>

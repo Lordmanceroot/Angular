@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'untitled3';
+  showModal = false;
+  public toggleCart(): void {
+    this.showModal = !this.showModal;
+  }
 }

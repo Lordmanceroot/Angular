@@ -1,9 +1,31 @@
-<div class="basket">
-  <a class="basket-link"
-     onclick="clickOpen()">
-    <img class="basket-image"
-         src="https://mstatic.wbstatic.net/sitemobile/4.10.0/static/media/basket.665fe316.svg"
-         alt="">
-    <span>Корзина</span>
-  </a>
+<div id="popup"
+     class="popup">
+  <div class="popup-body">
+    <div class="popup-content">
+      <a onclick="clickClose()"
+         class="popup-close">+</a>
+      <div class="popup-title">Ваш заказ:</div>
+      <div class="popup-list">
+
+        <div class="popup-basket">
+          <button id="delete-from-basket" class="delete-from-basket">[X]</button>
+          <div class="popup-basket-name">
+            <img class="popup-basket-image" alt="img"/>
+            <span class="popup-card"></span>
+          </div>
+
+          <div class="basket-price">
+            <span></span>
+          </div>
+        </div>
+
+      </div>
+      <div class="buttons">
+        <button class="checkout">Заказать</button>
+        <button type="reset" class="checkout" onclick="removeAllItems()">Очистить корзину</button>
+      </div>
+
+    </div>
+  </div>
 </div>
+
