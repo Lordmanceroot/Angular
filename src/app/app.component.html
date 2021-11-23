@@ -1,3 +1,4 @@
 <app-header (onOpenCart)="toggleCart()"></app-header>
 <app-cards></app-cards>
-<app-basket *ngIf="showModal"></app-basket>
+<app-basket *ngIf="showModal" (onCloseCart)="toggleCart()"></app-basket>
+<app-footer></app-footer>
