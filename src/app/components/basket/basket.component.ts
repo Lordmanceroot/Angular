@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {products} from "../../mock/basket.mock";
 
 @Component({
   selector: 'app-basket',
@@ -7,10 +8,14 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class BasketComponent implements OnInit {
 
+  basket: any;
+
   @Output()
   public onCloseCart: EventEmitter<void> = new EventEmitter<void>();
 
   constructor() {
+    this.basket = products
+    console.log("basket:", this.basket)
   }
 
   ngOnInit(): void {
@@ -20,4 +25,7 @@ export class BasketComponent implements OnInit {
     this.onCloseCart.emit();
   }
 
+  removeBasket() {
+
+  }
 }

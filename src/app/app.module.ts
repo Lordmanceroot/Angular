@@ -8,6 +8,8 @@ import { BasketComponent } from './components/basket/basket.component';
 import { LoginComponent } from './components/login/login.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {AppRoutingModule} from "./app-routing.module";
+import {QuoteService} from "./services/quote.service";
 
 @NgModule({
   declarations: [
@@ -20,9 +22,12 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    QuoteService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

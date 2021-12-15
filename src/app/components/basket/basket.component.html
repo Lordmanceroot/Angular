@@ -3,24 +3,26 @@
     <div class="popup-content">
       <a class="popup-close" (click)="closeCart()">+</a>
       <div class="popup-title">Ваш заказ:</div>
-      <div class="popup-list">
 
+      <div class="popup-list">
+        <ng-container *ngFor="let item of basket">
         <div class="popup-basket">
           <button class="delete-from-basket">[X]</button>
           <div class="popup-basket-name">
-            <img class="popup-basket-image" alt="img"/>
-            <span class="popup-card"></span>
+            <img class="popup-basket-image" src="{{item.image}}" alt="img"/>
+            <span class="popup-card">{{item.name}}</span>
           </div>
 
           <div class="basket-price">
-            <span></span>
+            <span>{{item.price}}</span>
           </div>
         </div>
-
+        </ng-container>
       </div>
+
       <div class="buttons">
         <button class="checkout">Заказать</button>
-        <button type="reset" class="checkout" >Очистить корзину</button>
+        <button type="reset" class="checkout" (click)="removeBasket()">Очистить корзину</button>
       </div>
 
     </div>

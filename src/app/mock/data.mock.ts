@@ -18,5 +18,17 @@ export const products: Product[] = [
     image: "https://miodessa.com/wp-content/uploads/2021/03/poco_f3_12-600x600.jpg",
     name: "Смартфон POCO F3 (8/256gb) черный/ Night Black",
     price: 31990
+  },
+  {
+    id: 4,
+    image: "https://miodessa.com/wp-content/uploads/2021/03/poco_f3_12-600x600.jpg",
+    name: "Смартфон POCO F3 (8/256gb) черный/ Night Black",
+    price: 31990
+  },
+  {
+    id: 5,
+    image: "https://miodessa.com/wp-content/uploads/2021/03/poco_f3_12-600x600.jpg",
+    name: "Смартфон POCO F3 (8/256gb) черный/ Night Black",
+    price: 31990
   }
 ]
