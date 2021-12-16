@@ -7,7 +7,7 @@
       <div class="popup-list">
         <ng-container *ngFor="let item of basket">
         <div class="popup-basket">
-          <button class="delete-from-basket">[X]</button>
+          <button class="delete-from-basket" (click)="deleteItemOfBasket(item)">[X]</button>
           <div class="popup-basket-name">
             <img class="popup-basket-image" src="{{item.image}}" alt="img"/>
             <span class="popup-card">{{item.name}}</span>
@@ -22,7 +22,7 @@
 
       <div class="buttons">
         <button class="checkout">Заказать</button>
-        <button type="reset" class="checkout" (click)="removeBasket()">Очистить корзину</button>
+        <button type="reset" class="checkout" (click)="cleanBasket()">Очистить корзину</button>
       </div>
 
     </div>

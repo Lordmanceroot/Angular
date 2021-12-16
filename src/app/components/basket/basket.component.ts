@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {products} from "../../mock/basket.mock";
+import {QuoteService} from "../../services/quote.service";
 
 @Component({
   selector: 'app-basket',
@@ -13,7 +14,7 @@ export class BasketComponent implements OnInit {
   @Output()
   public onCloseCart: EventEmitter<void> = new EventEmitter<void>();
 
-  constructor() {
+  constructor(private quoteService: QuoteService) {
     this.basket = products
     console.log("basket:", this.basket)
   }
@@ -25,7 +26,13 @@ export class BasketComponent implements OnInit {
     this.onCloseCart.emit();
   }
 
-  removeBasket() {
+  cleanBasket() {
+    products.length = 0
+    console.log(this.basket)
+  }
 
+  deleteItemOfBasket(item: any): void {
+    this.quoteService.deleteProductFromCart(item);
+    console.log(this.basket)
   }
 }
