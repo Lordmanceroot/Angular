@@ -6,11 +6,11 @@ export class QuoteService {
 
   addQuote(product: Product) {
     products.push(product)
+
   }
 
   deleteProductFromCart(product: Product) : void {
     const findIndex: any = products.findIndex((data: Product) => data.id === product.id);
-    console.log(findIndex)
     products.splice(findIndex, 1);
   }
 }

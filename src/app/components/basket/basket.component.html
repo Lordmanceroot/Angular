@@ -13,6 +13,12 @@
             <span class="popup-card">{{item.name}}</span>
           </div>
 
+          <div class="count">
+            <button class="count-button" type="button" (click)="decrease()">-</button>
+            <input class="count-input" type="text" [value]="count"/>
+            <button class="count-button" type="button" (click)="increase()">+</button>
+          </div>
+
           <div class="basket-price">
             <span>{{item.price}}</span>
           </div>

@@ -27,7 +27,7 @@ export class CardsComponent implements OnInit {
       return products.id === id
     })
     this.quoteService.addQuote(this.cardBasket)
-    console.log("Click")
-    console.log(this.cardBasket)
+    console.log("кнопка по карточке", this.cardBasket)
+
   }
 }

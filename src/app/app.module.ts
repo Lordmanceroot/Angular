@@ -8,8 +8,9 @@ import { BasketComponent } from './components/basket/basket.component';
 import { LoginComponent } from './components/login/login.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { FooterComponent } from './components/footer/footer.component';
-import {AppRoutingModule} from "./app-routing.module";
-import {QuoteService} from "./services/quote.service";
+import { AppRoutingModule } from "./app-routing.module";
+import { QuoteService } from "./services/quote.service";
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {QuoteService} from "./services/quote.service";
     BasketComponent,
     LoginComponent,
     CardsComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

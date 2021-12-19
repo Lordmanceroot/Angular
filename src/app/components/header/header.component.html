@@ -1,6 +1,6 @@
 <header class="header-top container">
   <div class="navbar">
-    <a href="../../../index.html"
+    <a routerLink="/home"
        class="logo">
       <span class="logo">TRADOS</span>
     </a>
@@ -13,7 +13,9 @@
         <span>Корзина</span>
       </a>
     </div>
-    <app-login></app-login>
+    <div class="login">
+      <button routerLink="/login" class="button-login">Вход и регистрация</button>
+    </div>
   </div>
 </header>
 <hr class="header_underline"/>

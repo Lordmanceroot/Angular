@@ -103,3 +103,20 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+.count {
+  display: flex;
+  align-items: center;
+}
+
+.count-button {
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  padding: 10px;
+}
+
+.count-input {
+  width: 40px;
+  height: 19px;
+}
