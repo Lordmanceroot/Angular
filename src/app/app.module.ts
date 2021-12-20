@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { QuoteService } from "./services/quote.service";
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { DeliveryComponent } from './components/delivery/delivery.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     LoginComponent,
     CardsComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DeliveryComponent
   ],
   imports: [
     BrowserModule,
