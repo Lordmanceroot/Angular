@@ -19,7 +19,7 @@ export class CardsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.data = this.productService.getProduct();
+    this.data = this.productService.getProducts();
   }
 
   cardInBasket(id: number): void {
