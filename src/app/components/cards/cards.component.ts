@@ -12,6 +12,7 @@ export class CardsComponent implements OnInit {
 
   public data: Product[] = []
   public cardBasket: any
+  title = 'Рекомендации для вас'
 
   constructor(private productService: ProductService,
               private quoteService: QuoteService

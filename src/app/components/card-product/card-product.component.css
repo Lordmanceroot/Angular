@@ -1,0 +1,60 @@
+h1 {
+  font-size: 1.5em;
+}
+
+img {
+  height: 400px;
+  border-radius: 20px;
+}
+
+.cards {
+  width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: auto;
+}
+
+.feature {
+  width: 500px;
+}
+
+.feature li {
+  margin-bottom: 0.6em;
+
+}
+
+.feature ul {
+  padding: 0;
+  margin-left: 40px;
+}
+
+.price {
+  width: 300px;
+  margin-left: 40px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.price p {
+  text-align: center;
+  font-size: 3em;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.price a p {
+  font-size: 0.8em;
+  margin-top: 20px;
+}
+
+.price button {
+  margin-top: 20px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  text-transform: uppercase;
+}

@@ -12,6 +12,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { QuoteService } from "./services/quote.service";
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DeliveryComponent } from './components/delivery/delivery.component';
+import { CardProductComponent } from './components/card-product/card-product.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DeliveryComponent } from './components/delivery/delivery.component';
     CardsComponent,
     FooterComponent,
     PageNotFoundComponent,
-    DeliveryComponent
+    DeliveryComponent,
+    CardProductComponent
   ],
   imports: [
     BrowserModule,

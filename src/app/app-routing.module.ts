@@ -4,9 +4,11 @@ import {LoginComponent} from "./components/login/login.component";
 import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
 import {CardsComponent} from "./components/cards/cards.component";
 import {DeliveryComponent} from "./components/delivery/delivery.component";
+import {CardProductComponent} from "./components/card-product/card-product.component";
 
 const routes: Routes = [
   {path: '', component:CardsComponent},
+  {path: 'cardProduct', component:CardProductComponent},
   {path: 'login', component:LoginComponent},
   {path: 'delivery', component:DeliveryComponent},
 
