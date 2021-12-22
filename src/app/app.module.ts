@@ -13,6 +13,7 @@ import { QuoteService } from "./services/quote.service";
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DeliveryComponent } from './components/delivery/delivery.component';
 import { CardProductComponent } from './components/card-product/card-product.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CardProductComponent } from './components/card-product/card-product.com
     FooterComponent,
     PageNotFoundComponent,
     DeliveryComponent,
-    CardProductComponent
+    CardProductComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
