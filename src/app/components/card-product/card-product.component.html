@@ -1,7 +1,8 @@
 <div>
-  <h1>2Смартфон POCO F3 (8/256gb) черный/ Night Black</h1>
+
+  <h1>{{data.name}}</h1>
   <div class="cards container">
-    <img src="https://miodessa.com/wp-content/uploads/2021/03/poco_f3_12-600x600.jpg" alt="photo">
+    <img src="{{data.image}}" alt="photo">
     <div class="feature">
       <ul>
         <li>Дисплей: IPS, 6,67 дюймов, разрешение FHD+, частота обновления 120 Гц, частота опроса сенсорного слоя 240
@@ -19,9 +20,9 @@
       </ul>
     </div>
     <div class="price">
-      <p><b>31 990</b></p>
+      <p><b>{{data.price}}</b></p>
       <a href="#"><p>Получить скидку</p></a>
-      <button>Добавить в корзину</button>
+      <button (click)="addQuote(data.id)">Добавить в корзину</button>
     </div>
   </div>
 </div>

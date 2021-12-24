@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {products} from "../../mock/basket.mock";
+import {productsQuote} from "../../mock/basket.mock";
 import {QuoteService} from "../../services/quote.service";
 import {Product} from "../../models/product.model";
 
@@ -18,9 +18,9 @@ export class BasketComponent implements OnInit {
   public onCloseCart: EventEmitter<void> = new EventEmitter<void>();
 
   constructor(private quoteService: QuoteService) {
-    this.basket = products;
+    this.basket = productsQuote;
 
-    console.log("basket:", products)
+    console.log("basket:", productsQuote)
   }
 
   ngOnInit(): void {
@@ -31,7 +31,7 @@ export class BasketComponent implements OnInit {
   }
 
   cleanBasket() {
-    products.length = 0;
+    productsQuote.length = 0;
     console.log(this.basket)
   }
 

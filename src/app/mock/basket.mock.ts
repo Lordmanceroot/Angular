@@ -1,3 +1,3 @@
 import {Product} from "../models/product.model";
 
-export const products: Product[] = []
+export const productsQuote: Product[] = []

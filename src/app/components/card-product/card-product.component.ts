@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CardsComponent} from "../cards/cards.component"
+import {QuoteService} from "../../services/quote.service";
+import {CardService} from "../../services/card.service";
 
 
 @Component({
@@ -8,12 +9,17 @@ import {CardsComponent} from "../cards/cards.component"
   styleUrls: ['./card-product.component.css']
 })
 export class CardProductComponent implements OnInit {
+  public data: any
 
-
-
-  constructor() { }
+  constructor(private cardService: CardService,
+              private quoteService: QuoteService ) { }
 
   ngOnInit(): void {
+    this.data = this.cardService.cardItem
+  }
+
+  addQuote(id: number) {
+    this.quoteService.cardInBasket(id)
   }
 
 }
