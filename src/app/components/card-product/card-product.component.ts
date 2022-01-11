@@ -9,17 +9,16 @@ import {CardService} from "../../services/card.service";
   styleUrls: ['./card-product.component.css']
 })
 export class CardProductComponent implements OnInit {
-  public data: any
+  data: any;
 
   constructor(private cardService: CardService,
               private quoteService: QuoteService ) { }
 
   ngOnInit(): void {
-    this.data = this.cardService.cardItem
+    this.data = this.cardService.cardItem;
   }
 
   addQuote(id: number) {
-    this.quoteService.cardInBasket(id)
+    this.quoteService.addCardInBasket(id);
   }
-
 }

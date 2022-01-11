@@ -10,27 +10,22 @@ import {CardService} from "../../services/card.service";
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
-  public data: Product[] = []
-  title = 'Рекомендации для Вас'
-
+  data: Product[] = [];
 
   constructor(private productService: ProductService,
               private quoteService: QuoteService,
-              private cardService: CardService
-  ) {
+              private cardService: CardService) {
   }
 
   ngOnInit(): void {
     this.data = this.productService.getProducts();
   }
 
-
-  addQuote(id: number) {
-    this.quoteService.cardInBasket(id)
-
+  addInBasket(id: number) {
+    this.quoteService.addCardInBasket(id);
   }
 
-  cardProduct(item: Product) {
-    this.cardService.setProducts(item)
+  skipToProductDetails(item: Product) {
+    this.cardService.setProducts(item);
   }
 }

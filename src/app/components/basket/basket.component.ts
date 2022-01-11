@@ -10,17 +10,13 @@ import {Product} from "../../models/product.model";
 })
 export class BasketComponent implements OnInit {
 
-  public basket: Product[] = [];
-
-  public count: number = 1;
-
   @Output()
-  public onCloseCart: EventEmitter<void> = new EventEmitter<void>();
+  basket: Product[] = [];
+  count: number = 1;
+  onCloseCart: EventEmitter<void> = new EventEmitter<void>();
 
   constructor(private quoteService: QuoteService) {
     this.basket = productsQuote;
-
-    console.log("basket:", productsQuote)
   }
 
   ngOnInit(): void {
@@ -32,7 +28,6 @@ export class BasketComponent implements OnInit {
 
   cleanBasket() {
     productsQuote.length = 0;
-    console.log(this.basket)
   }
 
   deleteItemOfBasket(item: any): void {
