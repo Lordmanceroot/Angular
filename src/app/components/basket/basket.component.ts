@@ -22,7 +22,7 @@ export class BasketComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  closeCart(): void {
+  closeBasket(): void {
     this.onCloseCart.emit();
   }
 
