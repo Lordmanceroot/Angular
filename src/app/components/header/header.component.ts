@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,11 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  search = '';
   @Output()
   public onOpenCart: EventEmitter<void> = new EventEmitter<void>();
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit(): void {
@@ -18,5 +20,13 @@ export class HeaderComponent implements OnInit {
 
   public openCart(): void {
     this.onOpenCart.emit();
+  }
+
+  onSearch(): void {
+    this.router.navigate([''], {
+      queryParams: {
+        search: this.search
+      }
+    });
   }
 }

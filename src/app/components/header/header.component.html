@@ -6,6 +6,7 @@
     </a>
     <app-navbar-panel></app-navbar-panel>
     <div class="basket" (click)="openCart()">
+      <input class="search" type="text" placeholder="Search..." [(ngModel)]="search" (keyup.enter)="onSearch()">
       <a class="basket-link">
         <img class="basket-image"
              src="https://mstatic.wbstatic.net/sitemobile/4.10.0/static/media/basket.665fe316.svg"
@@ -19,3 +20,4 @@
   </div>
 </header>
 <hr class="header_underline"/>
+

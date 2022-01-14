@@ -16,9 +16,15 @@ export class CardService {
   }
 
   getProduct(id: number): void {
-    const productID: any = this.cardItem.find((products: Product) => {
+    const productID = this.cardItem.find((products: Product) => {
       return products.id === id
     })
     return productID
+  }
+
+  getCardsProducts(search: string = ''): Product[] {
+    return this.cardItem.filter((item: any) => {
+      return item.name.toLowerCase().includes(search.toLowerCase());
+    });
   }
 }
