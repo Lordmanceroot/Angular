@@ -11,9 +11,10 @@ import {Product} from "../../models/product.model";
 export class BasketComponent implements OnInit {
 
   @Output()
+  onCloseCart: EventEmitter<void> = new EventEmitter<void>();
+
   basket: Product[] = [];
   count: number = 1;
-  onCloseCart: EventEmitter<void> = new EventEmitter<void>();
 
   constructor(private quoteService: QuoteService) {
     this.basket = productsQuote;

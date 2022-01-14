@@ -12,8 +12,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { QuoteService } from "./services/quote.service";
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DeliveryComponent } from './components/delivery/delivery.component';
-import { CardProductComponent } from './components/card-product/card-product.component';
 import { RegistrationComponent } from './components/registration/registration.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +26,8 @@ import { RegistrationComponent } from './components/registration/registration.co
     FooterComponent,
     PageNotFoundComponent,
     DeliveryComponent,
-    CardProductComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

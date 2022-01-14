@@ -3,8 +3,8 @@
       <ng-container *ngFor="let item of data">
       <div class="card">
         <div class="card-header">
-          <a routerLink="/cardProduct"
-             class="card-link" (click)="skipToProductDetails(item)">
+          <a routerLink="/product/{{item.id}}"
+             class="card-link" >
             <img class="card-image"
                  [src]="item.image"
                  alt="photo"/>
@@ -13,8 +13,6 @@
             </h2>
           </a>
         </div>
-
-
       <div class="card-footer">
           <strong class="card-price">{{item.price}}</strong>
           <button class="card-in-basket" (click)="addInBasket(item.id)"><span>В корзину</span></button>
