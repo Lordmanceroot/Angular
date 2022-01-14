@@ -3,4 +3,10 @@ export interface Product {
   image: string;
   name: string;
   price: number;
+  params?: {
+    display?: string,
+    battery?: string,
+    camera?: string,
+    memory?: string
+  }
 }
