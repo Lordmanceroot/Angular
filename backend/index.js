@@ -1,5 +1,5 @@
 const express = require('express')
-const {products} = require("../../src/app/mock/data.mock");
+const products = require("../src/app/mock/data.mock.json");
 const app = express()
 const port = 3000
 
