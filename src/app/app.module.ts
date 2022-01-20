@@ -39,7 +39,6 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     HttpClientModule
   ],
   providers: [
-    QuoteService
   ],
   bootstrap: [AppComponent]
 })

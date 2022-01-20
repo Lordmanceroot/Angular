@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {CardService} from "../../services/card.service";
 import {QuoteService} from "../../services/quote.service";
+import {Product} from "../../models/product.model";
 
 @Component({
   selector: 'app-product-details',
@@ -9,16 +10,16 @@ import {QuoteService} from "../../services/quote.service";
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  data: any;
+     product!: Product;
 
   constructor(private activatedRoute: ActivatedRoute,
               private cardService: CardService,
-              private quoteService: QuoteService) { }
+              private quoteService: QuoteService) {}
 
   ngOnInit(): void {
-    const id = this.activatedRoute.snapshot.params['id']
+    const id = this.activatedRoute.snapshot.params['id'];
     if (id) {
-      this.data = this.cardService.getProduct(+id);
+      this.product = this.cardService.getProduct(+id);
     }
   }
 

@@ -4,7 +4,7 @@ import {ProductService} from "../../services/product.service";
 import {QuoteService} from "../../services/quote.service";
 import {CardService} from "../../services/card.service";
 import {ActivatedRoute} from "@angular/router";
-import {Subscription, take} from "rxjs";
+import {Subject, take} from "rxjs";
 
 @Component({
   selector: 'app-cards',
@@ -12,8 +12,7 @@ import {Subscription, take} from "rxjs";
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
-  private subscription: Subscription = new Subscription();
-  data: Product[] = [];
+  data: Subject<Product[]> = new Subject();
 
   constructor(private productService: ProductService,
               private quoteService: QuoteService,
@@ -23,29 +22,19 @@ export class CardsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.subscription = this.productService.getProducts()
+    this.productService.getProducts()
       .pipe(take(1))
-      .subscribe((products) => {
-      this.data = products
-    })
+      .subscribe((products) => this.data.next(products));
     console.log(this.data)
-    // this.data = this.productService.getProducts();
 
-    this.activatedRoute.queryParamMap.subscribe((params) => {
-      const search = params.get('search') || '';
-      this.data = this.cardService.getCardsProducts(search);
-    });
-  }
-
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe()
+    this.activatedRoute.queryParamMap
+      .subscribe((params) => {
+        const search = params.get('search') || '';
+        this.data.next(this.cardService.getCardsProducts(search))
+      });
   }
 
   addInBasket(id: number) {
     this.quoteService.addCardInBasket(id);
   }
-
-  // skipToProductDetails(item: Product) {
-  //   this.cardService.setProducts(item);
-  // }
 }

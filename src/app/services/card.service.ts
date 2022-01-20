@@ -15,11 +15,10 @@ export class CardService {
     return this.cardItem;
   }
 
-  getProduct(id: number): void {
-    const productID = this.cardItem.find((products: Product) => {
+  getProduct(id: number): Product {
+    return this.cardItem.find((products: Product) => {
       return products.id === id
     })
-    return productID
   }
 
   getCardsProducts(search: string = ''): Product[] {
