@@ -1,14 +1,14 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {productsQuote} from "../../mock/basket.mock";
-import {QuoteService} from "../../services/quote.service";
+import {CartService} from "../../services/cart.service";
 import {Product} from "../../models/product.model";
 
 @Component({
   selector: 'app-basket',
-  templateUrl: './basket.component.html',
-  styleUrls: ['./basket.component.css']
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.css']
 })
-export class BasketComponent implements OnInit {
+export class CartComponent implements OnInit {
 
   @Output()
   onCloseCart: EventEmitter<void> = new EventEmitter<void>();
@@ -16,7 +16,7 @@ export class BasketComponent implements OnInit {
   basket: Product[] = [];
   count: number = 1;
 
-  constructor(private quoteService: QuoteService) {
+  constructor(private quoteService: CartService) {
     this.basket = productsQuote;
   }
 

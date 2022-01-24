@@ -6,24 +6,17 @@ import {products} from "../mock/data.mock";
   providedIn: 'root'
 })
 export class CardService {
-  cardItem: any = products
-  setProducts(item: Product): void {
-    this.cardItem = item
-  }
+  products: any = products;
 
-  getProducts(): Product {
-    return this.cardItem;
-  }
-
-  getProduct(id: number): Product {
-    return this.cardItem.find((products: Product) => {
-      return products.id === id
-    })
-  }
+  getIdOfProduct(id: number): Product {
+    return this.products.find((products: Product) => {
+      return products.id === id;
+    });
+  };
 
   getCardsProducts(search: string = ''): Product[] {
-    return this.cardItem.filter((item: any) => {
+    return this.products.filter((item: any) => {
       return item.name.toLowerCase().includes(search.toLowerCase());
     });
-  }
+  };
 }

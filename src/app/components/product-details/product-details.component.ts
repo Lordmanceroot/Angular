@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {CardService} from "../../services/card.service";
-import {QuoteService} from "../../services/quote.service";
+import {CartService} from "../../services/cart.service";
 import {Product} from "../../models/product.model";
 
 @Component({
@@ -14,16 +14,16 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute,
               private cardService: CardService,
-              private quoteService: QuoteService) {}
+              private quoteService: CartService) {}
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
     if (id) {
-      this.product = this.cardService.getProduct(+id);
+      this.product = this.cardService.getIdOfProduct(+id);
     }
   }
 
   addCardInBasket(id: number) {
-    this.quoteService.addCardInBasket(id);
+    this.quoteService.addProductInBasket(id);
   }
 }
