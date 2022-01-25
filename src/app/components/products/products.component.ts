@@ -3,7 +3,7 @@ import {Product} from "../../models/product.model";
 import {ProductService} from "../../services/product.service";
 import {CartService} from "../../services/cart.service";
 import {ActivatedRoute} from "@angular/router";
-import {Subject, take} from "rxjs";
+import {Subject} from "rxjs";
 
 
 @Component({
