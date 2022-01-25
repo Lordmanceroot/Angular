@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {CardService} from "../../services/card.service";
 import {CartService} from "../../services/cart.service";
 import {Product} from "../../models/product.model";
+import {ProductService} from "../../services/product.service";
 
 @Component({
   selector: 'app-product-details',
@@ -10,20 +10,23 @@ import {Product} from "../../models/product.model";
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-     product!: Product;
+     product!: Product | null;
 
   constructor(private activatedRoute: ActivatedRoute,
-              private cardService: CardService,
-              private quoteService: CartService) {}
+              private quoteService: CartService,
+              private productService: ProductService) {}
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
     if (id) {
-      this.product = this.cardService.getIdOfProduct(+id);
+      this.product = this.productService.getIdOfProduct(+id);
+      console.log(this.product)
     }
   }
 
   addCardInBasket(id: number) {
-    this.quoteService.addProductInBasket(id);
-  }
+    this.productService.addProductInBasket(id);
+    console.log(this.product)
+  };
+
 }

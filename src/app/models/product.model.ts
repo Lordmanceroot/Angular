@@ -8,5 +8,5 @@ export interface Product {
     battery?: string,
     camera?: string,
     memory?: string
-  }
+  };
 }

@@ -1,7 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {productsQuote} from "../../mock/basket.mock";
-import {CartService} from "../../services/cart.service";
 import {Product} from "../../models/product.model";
+import {ProductService} from "../../services/product.service";
 
 @Component({
   selector: 'app-basket',
@@ -16,7 +16,7 @@ export class CartComponent implements OnInit {
   basket: Product[] = [];
   count: number = 1;
 
-  constructor(private quoteService: CartService) {
+  constructor(private productService: ProductService) {
     this.basket = productsQuote;
   }
 
@@ -32,7 +32,7 @@ export class CartComponent implements OnInit {
   }
 
   deleteItemOfBasket(item: any): void {
-    this.quoteService.deleteProductFromCart(item);
+    this.productService.deleteProductFromCart(item);
   }
 
   decrease(): void {

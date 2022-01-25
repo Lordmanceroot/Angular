@@ -1,19 +1,19 @@
 <div>
-  <h1>{{product.name}}</h1>
+  <h1>{{product?.name}}</h1>
   <div class="cards container">
-    <img src="{{product.image}}" alt="photo">
+    <img src="{{product?.image}}" alt="photo">
     <div class="feature">
       <ul>
-        <li>{{product.params?.display}}</li>
-        <li>{{product.params?.camera}}</li>
-        <li>{{product.params?.memory}}</li>
-        <li>{{product.params?.battery}}</li>
+        <li>{{product?.params?.display}}</li>
+        <li>{{product?.params?.camera}}</li>
+        <li>{{product?.params?.memory}}</li>
+        <li>{{product?.params?.battery}}</li>
       </ul>
     </div>
     <div class="price">
-      <p><b>{{product.price}}</b></p>
+      <p><b>{{product?.price}}</b></p>
       <a href="#"><p>Получить скидку</p></a>
-      <button (click)="addCardInBasket(product.id)">Добавить в корзину</button>
+      <button (click)="addCardInBasket(product!.id)">Добавить в корзину</button>
     </div>
   </div>
 </div>
