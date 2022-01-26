@@ -21,11 +21,6 @@ export class ProductService {
       }))
   };
 
-  deleteProductFromCart(product: Product): void {
-    const findIndex = productsQuote.findIndex((data: Product) => data.id === product.id);
-    productsQuote.splice(findIndex, 1);
-  };
-
   addProductInBasket(id: number): void {
     const cardBasket: any = this.productList.find((products) => {
       return products.id === id;

@@ -20,13 +20,11 @@ export class ProductDetailsComponent implements OnInit {
     const id = this.activatedRoute.snapshot.params['id'];
     if (id) {
       this.product = this.productService.getIdOfProduct(+id);
-      console.log(this.product)
     }
-  }
+  };
 
   addCardInBasket(id: number) {
     this.productService.addProductInBasket(id);
-    console.log(this.product)
   };
 
 }

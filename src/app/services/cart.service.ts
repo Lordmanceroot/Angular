@@ -1,7 +1,5 @@
 import {Product} from "../models/product.model";
 import {productsQuote} from "../mock/basket.mock";
-import {ProductService} from "./product.service";
-import {take} from "rxjs";
 import {Injectable} from "@angular/core";
 
 @Injectable({
@@ -9,14 +7,9 @@ import {Injectable} from "@angular/core";
 })
 
 export class CartService {
-  products: Product[] = [];
 
-  constructor(private productService: ProductService) {
-    // this.productService.getProducts()
-    //   .pipe(take(1))
-    //   .subscribe((products) => this.products = products)
+  deleteProductFromCart(product: Product): void {
+    const findIndex = productsQuote.findIndex((data: Product) => data.id === product.id);
+    productsQuote.splice(findIndex, 1);
   };
-
-
-
 }
