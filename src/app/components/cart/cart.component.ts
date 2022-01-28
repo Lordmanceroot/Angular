@@ -13,11 +13,11 @@ export class CartComponent implements OnInit {
   @Output()
   onCloseCart: EventEmitter<void> = new EventEmitter<void>();
 
-  basket: Product[] = [];
+  cart: Product[] = [];
   count: number = 1;
 
   constructor(private cartService: CartService) {
-    this.basket = productsQuote;
+    this.cart = productsQuote;
   }
 
   ngOnInit(): void {

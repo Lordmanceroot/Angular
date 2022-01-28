@@ -31,7 +31,7 @@ export class ProductsComponent implements OnInit {
       });
   }
 
-  addInBasket(id: number) {
-    this.productService.addProductInBasket(id);
+  addProductInCart(id: number) {
+    this.productService.addProductInCart(id);
   };
 }

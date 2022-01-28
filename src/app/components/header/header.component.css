@@ -3,6 +3,10 @@ header {
   flex-direction: column;
 }
 
+a.basket-link {
+  cursor: pointer;
+}
+
 .navbar {
   display: grid;
   grid-template-columns: repeat(2, 1fr 2fr);
