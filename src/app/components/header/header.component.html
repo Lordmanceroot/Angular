@@ -6,16 +6,16 @@
     </a>
     <app-navbar-panel></app-navbar-panel>
     <div class="sea">
-    <input class="search" type="text" placeholder="Search..." [(ngModel)]="search" (keyup.enter)="onSearch()">
-    <div class="basket" (click)="openCart()">
+      <input class="search" type="text" placeholder="Search..." [(ngModel)]="search" (keyup.enter)="onSearch()">
+      <div class="basket" (click)="openCart()">
 
-      <a class="basket-link">
-        <img class="basket-image"
-             src="https://mstatic.wbstatic.net/sitemobile/4.10.0/static/media/basket.665fe316.svg"
-             alt="">
-        <span>Корзина</span>
-      </a>
-    </div>
+        <a class="basket-link">
+          <img class="basket-image"
+               src="https://mstatic.wbstatic.net/sitemobile/4.10.0/static/media/basket.665fe316.svg"
+               alt="">
+          <span>Корзина</span>
+        </a>
+      </div>
     </div>
     <div class="login">
       <button routerLink="/login" class="button-login">Вход и регистрация</button>

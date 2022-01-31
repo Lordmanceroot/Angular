@@ -15,6 +15,7 @@
   opacity: 1;
 
 }
+
 .popup-body {
   min-height: 100%;
   display: flex;
@@ -22,6 +23,7 @@
   justify-content: center;
   padding: 30px 10px;
 }
+
 .popup-content {
   background-color: #fff;
   color: #202327;
@@ -29,6 +31,7 @@
   padding: 30px;
   position: relative;
 }
+
 .popup-close {
   position: absolute;
   right: 27px;
@@ -38,6 +41,7 @@
   text-decoration: none;
   transform: rotate(45deg);
 }
+
 .popup-title {
   font-size: 33px;
   margin: 15px;

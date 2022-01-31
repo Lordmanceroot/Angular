@@ -8,12 +8,12 @@ import {RegistrationComponent} from "./components/registration/registration.comp
 import {ProductDetailsComponent} from "./components/product-details/product-details.component";
 
 const routes: Routes = [
-  {path: '', component:ProductsComponent},
-  {path: 'registration', component:RegistrationComponent},
-  {path: 'login', component:LoginComponent},
-  {path: 'delivery', component:DeliveryComponent},
-  {path: 'product/:id', component:ProductDetailsComponent},
-  {path: '**', component:PageNotFoundComponent}
+  {path: '', component: ProductsComponent},
+  {path: 'registration', component: RegistrationComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'delivery', component: DeliveryComponent},
+  {path: 'product/:id', component: ProductDetailsComponent},
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
@@ -21,4 +21,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}
